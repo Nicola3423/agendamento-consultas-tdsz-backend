@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "appointments": {
+      ".read": "auth != null",
+      ".write": "auth != null && auth.token.userType == 'patient'"
+    },
+    "users": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}
